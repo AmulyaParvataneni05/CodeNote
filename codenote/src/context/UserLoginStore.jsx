@@ -7,7 +7,7 @@ function UserLoginStore({ children }) {
   let [err, setErr] = useState("");
   async function loginUser(userCred) {
     try {
-      let res = await fetch('https://code-note-api.vercel.app//users/login',{
+      let res = await fetch('https://code-note-api.vercel.app/users/login',{
                 method:'POST',
                 headers:{"Content-type":"application/json"},
                 body:JSON.stringify(userCred)
@@ -41,7 +41,7 @@ function UserLoginStore({ children }) {
   }
   async function loginWithGoogle(userEmail) {
     try {
-      let res = await fetch("https://code-note-api.vercel.app//users/check-email", {
+      let res = await fetch("https://code-note-api.vercel.app/users/check-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: userEmail }),

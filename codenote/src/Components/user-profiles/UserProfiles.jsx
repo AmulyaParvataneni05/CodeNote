@@ -31,7 +31,7 @@ function UserProfile() {
       try {
         let usernameOrUID = currentUser?.username || currentUser?.uid;
         if (!usernameOrUID) return;
-        let response = await fetch(`https://code-note-api.vercel.app//users/${usernameOrUID}`);
+        let response = await fetch(`https://code-note-api.vercel.app/users/${usernameOrUID}`);
         let data = await response.json();
         if (data.payload) {
           setCurrentUser(data.payload);
@@ -60,7 +60,7 @@ function UserProfile() {
     }
 
     try {
-      const response = await fetch("https://code-note-api.vercel.app//users/update-password", {
+      const response = await fetch("https://code-note-api.vercel.app/users/update-password", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -107,7 +107,7 @@ function UserProfile() {
     setFilteredCodes(updatedUser.codes);
 
     try {
-      await fetch("https://code-note-api.vercel.app//users/update-codes", {
+      await fetch("https://code-note-api.vercel.app/users/update-codes", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username: currentUser.username, codes: updatedUser.codes }),
@@ -127,7 +127,7 @@ function UserProfile() {
     setFilteredCodes(updatedCodes); // Update search results
 
     try {
-      await fetch("https://code-note-api.vercel.app//users/update-codes", {
+      await fetch("https://code-note-api.vercel.app/users/update-codes", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username: currentUser.username, codes: updatedCodes }),
@@ -147,7 +147,7 @@ function UserProfile() {
     setFilteredCodes(updatedCodes); // Update search results
 
     try {
-      await fetch("https://code-note-api.vercel.app//users/update-codes", {
+      await fetch("https://code-note-api.vercel.app/users/update-codes", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username: currentUser.username, codes: updatedCodes }),
@@ -329,7 +329,7 @@ function UserProfile() {
       try {
         let usernameOrUID = currentUser?.username || currentUser?.uid;
         if (!usernameOrUID) return;
-        let response = await fetch(`https://code-note-api.vercel.app//users/${usernameOrUID}`);
+        let response = await fetch(`https://code-note-api.vercel.app/users/${usernameOrUID}`);
         let data = await response.json();
         if (data.payload) {
           setCurrentUser(data.payload);
@@ -367,7 +367,7 @@ function UserProfile() {
     };
     setCurrentUser(updatedUser);
     try {
-      await fetch("https://code-note-api.vercel.app//users/update-codes", {
+      await fetch("https://code-note-api.vercel.app/users/update-codes", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username: currentUser.username, codes: updatedUser.codes }),
@@ -385,7 +385,7 @@ function UserProfile() {
     setCurrentUser(updatedUser);
 
     try {
-      await fetch("https://code-note-api.vercel.app//users/update-codes", {
+      await fetch("https://code-note-api.vercel.app/users/update-codes", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username: currentUser.username, codes: updatedCodes }),
@@ -402,7 +402,7 @@ function UserProfile() {
     let updatedUser = { ...currentUser, codes: updatedCodes };
     setCurrentUser(updatedUser);
     try {
-      await fetch("https://code-note-api.vercel.app//users/update-codes", {
+      await fetch("https://code-note-api.vercel.app/users/update-codes", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ username: currentUser.username, codes: updatedCodes }),

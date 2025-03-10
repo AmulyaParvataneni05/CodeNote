@@ -1,13 +1,13 @@
-GET https://code-note-api.vercel.app//users/
+GET https://code-note-api.vercel.app/users/
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFtdWx5YTIwMDUiLCJpYXQiOjE3NDE1Mjc0NTMsImV4cCI6MTc0MTUzMTA1M30.4VAQhfoSNfAERRbiXSkW4uf2tD41kAoJRJxDPdR5pB4
 
 ###
-get https://code-note-api.vercel.app//users/Amulya
+get https://code-note-api.vercel.app/users/Amulya
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFtdWx5YTIwMDUiLCJpYXQiOjE3NDE1Mjc0NTMsImV4cCI6MTc0MTUzMTA1M30.4VAQhfoSNfAERRbiXSkW4uf2tD41kAoJRJxDPdR5pB4
 
 
 ###
-POST https://code-note-api.vercel.app//users/register
+POST https://code-note-api.vercel.app/users/register
 Content-Type: application/json
 
 {
@@ -19,7 +19,7 @@ Content-Type: application/json
 }
 
 ###
-post https://code-note-api.vercel.app//users/login
+post https://code-note-api.vercel.app/users/login
 Content-Type: application/json
 
 {
@@ -30,7 +30,7 @@ Content-Type: application/json
 
 
 ###
-put https://code-note-api.vercel.app//users
+put https://code-note-api.vercel.app/users
 Content-Type: application/json
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFtdWx5YSIsImlhdCI6MTczODk5MzQ0NiwiZXhwIjoxNzM4OTk3MDQ2fQ.rov_CvcXg5DqEHSyh7TPkKmCERoQ4feD8yqh-WFl7WQ
 
@@ -43,7 +43,7 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFtd
 }
 
 ###
-POST https://code-note-api.vercel.app//users/check-email
+POST https://code-note-api.vercel.app/users/check-email
 Content-Type: application/json
 
 {
@@ -52,7 +52,7 @@ Content-Type: application/json
 
 ### Add new code to user's code array
 ### Update User Codes
-POST https://code-note-api.vercel.app//users/update-codes
+POST https://code-note-api.vercel.app/users/update-codes
 Content-Type: application/json
 
 {
@@ -67,7 +67,7 @@ Content-Type: application/json
 }
 
 ###
-POST https://code-note-api.vercel.app//users/update-password
+POST https://code-note-api.vercel.app/users/update-password
 Content-Type: application/json
 
 {
