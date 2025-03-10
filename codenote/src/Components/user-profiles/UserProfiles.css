@@ -1,0 +1,71 @@
+.login-btn{
+  color: white !important;
+  background-color: #3D8D7A !important;
+
+}
+.login-btn:hover{
+  color: #3D8D7A !important;
+  background-color: white !important;
+}
+.user-div {
+  min-height: 100vh;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.new-code-option {
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+.new-code{
+  color: white !important;
+}
+.btn-new {
+  float: right;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  color: white !important;
+  background:#3D8D7A !important;
+  width: 150px;
+}
+.userdetails-display{
+  display: flex;
+  flex-direction: row;
+  gap: 4px;
+  margin-left: 80%;
+}
+.btn-change{
+  float: right;
+  margin-right: 20px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  color: white !important;
+  background:#3D8D7A !important;
+  width: 220px;
+}
+@media screen and (max-width: 768px) {
+  .user-div {
+    padding: 10px;
+  }
+
+  .new-code-option {
+    justify-content: center; /* Center align on smaller screens */
+  }
+
+  .userdetails-display {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .btn-new, .btn-change {
+    width: 100%; /* Full width buttons on small screens */
+    max-width: 220px;
+  }
+}

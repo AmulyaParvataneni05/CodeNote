@@ -1,0 +1,90 @@
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  text-align: center;
+}
+.codenote-logo {
+  width: 60vw;
+  max-width: 350px;
+  height: auto;
+  margin-bottom: 20px;
+}
+.content {
+  width: 90%;
+  max-width: 600px;
+  padding: 20px;
+  color: white;
+  text-align: center;
+}
+.subtitle {
+  font-size: 1.6rem;
+  opacity: 0;
+  color: white;
+  animation: fadeIn 1s ease-out 2s forwards;
+}
+.start-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px;
+  font-size: 1.2rem;
+  background: #3D8D7A;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: 0.3s;
+  animation: fadeIn 1s ease-out 5s forwards;
+}
+
+.start-btn:hover {
+  color: #3D8D7A;
+  background: white;
+  border: 2px solid #3D8D7A;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media (max-width: 768px) {
+  .codenote-logo {
+    width: 80vw;
+  }
+
+  .subtitle {
+    font-size: 1.4rem;
+  }
+
+  .start-btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .codenote-logo {
+    width: 90vw;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+
+  .start-btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}

@@ -1,0 +1,81 @@
+GET https://deployment-test-gilt.vercel.app/users/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFtdWx5YTIwMDUiLCJpYXQiOjE3NDE1Mjc0NTMsImV4cCI6MTc0MTUzMTA1M30.4VAQhfoSNfAERRbiXSkW4uf2tD41kAoJRJxDPdR5pB4
+
+###
+get https://deployment-test-gilt.vercel.app/users/Amulya
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFtdWx5YTIwMDUiLCJpYXQiOjE3NDE1Mjc0NTMsImV4cCI6MTc0MTUzMTA1M30.4VAQhfoSNfAERRbiXSkW4uf2tD41kAoJRJxDPdR5pB4
+
+
+###
+POST https://deployment-test-gilt.vercel.app/users/register
+Content-Type: application/json
+
+{
+    "username":"patish",
+    "password":"Amulya2005",
+    "confirmpassword":"Amulya2005",
+    "email":"password@gmail.com",
+    "codes":[]
+}
+
+###
+post https://deployment-test-gilt.vercel.app/users/login
+Content-Type: application/json
+
+{
+    "username":"psaish",
+    "password":"Amulya2005"
+}
+
+
+
+###
+put https://deployment-test-gilt.vercel.app/users
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFtdWx5YSIsImlhdCI6MTczODk5MzQ0NiwiZXhwIjoxNzM4OTk3MDQ2fQ.rov_CvcXg5DqEHSyh7TPkKmCERoQ4feD8yqh-WFl7WQ
+
+
+{
+    "username":"madhu",
+    "password":"madhu",
+    "email": "madhu@gmail.com",
+    "confirmpassword" : "madhu",
+}
+
+###
+POST https://deployment-test-gilt.vercel.app/users/check-email
+Content-Type: application/json
+
+{
+  "email": "webdeveloperone8@gmail.com"
+}
+
+### Add new code to user's code array
+### Update User Codes
+POST https://deployment-test-gilt.vercel.app/users/update-codes
+Content-Type: application/json
+
+{
+  "username": "Amulya",
+  "codes": [
+    {
+      "name": "Bubble Sort",
+      "language": "Python",
+      "code": "def bubble_sort(arr): pass"
+    }
+  ]
+}
+
+###
+POST https://deployment-test-gilt.vercel.app/users/update-password
+Content-Type: application/json
+
+{
+  "username": "Amulya",
+  "oldPassword": "Amulya",
+  "newPassword": "AMULYA"
+}
+
+###
+delete http://localhost:4000/user-api/user/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IkFtdWx5YSIsImlhdCI6MTczODk5MzQ0NiwiZXhwIjoxNzM4OTk3MDQ2fQ.rov_CvcXg5DqEHSyh7TPkKmCERoQ4feD8yqh-WFl7WQ

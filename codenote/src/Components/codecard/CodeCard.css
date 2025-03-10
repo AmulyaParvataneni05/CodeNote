@@ -1,0 +1,98 @@
+.card-title-link {
+    font-size: 1.2rem;
+    color: #3D8D7A;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.card-title-link:hover {
+    color: #3D8D7A;
+    text-decoration: underline;
+}
+.card-link {
+    color: #3D8D7A !important;
+    text-decoration: none;
+}
+.card-link:hover {
+    color: #3D8D7A;
+    text-decoration: underline;
+}
+
+/* Button container */
+.change-btn {
+    display: flex;
+    gap: 5px;
+    justify-content: flex-end;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+/* Buttons */
+.delete-button, .update-button {
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 8px;
+    color: white !important;
+    background: #3D8D7A !important;
+    border: none !important;
+    width: 120px;
+    text-align: center;
+    cursor: pointer;
+}
+
+/* Code card responsiveness */
+.code-card {
+    width: 100%;
+    max-width: 900px;
+    min-width: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+.code-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Ensure code display remains readable */
+.code-card pre {
+    max-height: 200px;
+    overflow: auto;
+    word-wrap: break-word;
+    white-space: pre-wrap; /* Ensures long code lines wrap */
+}
+
+/* Modal adjustments */
+.custom-modal-header .btn-close {
+    color: red !important;
+    background-color: transparent;
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .code-card {
+        width: 100%;
+        min-width: 250px;
+    }
+
+    .delete-button, .update-button {
+        width: 100px; /* Smaller buttons */
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+
+    .change-btn {
+        justify-content: center; /* Center buttons on smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .code-card {
+        min-width: 220px;
+    }
+
+    .delete-button, .update-button {
+        width: 90px;
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+}
