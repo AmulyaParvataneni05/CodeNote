@@ -50,7 +50,7 @@ const Register = () => {
   async function onUserRegister(newUser) {
     console.log(newUser);
     try {
-        let res = await fetch("https://deployment-test-gilt.vercel.app/users/register", {
+        let res = await fetch("https://code-note-api.vercel.app//users/register", {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
@@ -78,7 +78,7 @@ const Register = () => {
       try {
         const result = await signInWithPopup(auth, provider);
         const userEmail = result.user.email;
-        const response = await fetch("https://deployment-test-gilt.vercel.app/users/check-email", {
+        const response = await fetch("https://code-note-api.vercel.app//users/check-email", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ email: userEmail }),
@@ -96,7 +96,7 @@ const Register = () => {
           alert("Signup canceled. Username and password are required.");
           return;
         }
-        const registerResponse = await fetch("https://deployment-test-gilt.vercel.app/users/register", {
+        const registerResponse = await fetch("https://code-note-api.vercel.app//users/register", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({

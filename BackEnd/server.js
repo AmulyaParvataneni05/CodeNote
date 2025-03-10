@@ -2,7 +2,7 @@ const exp = require("express");
 const app = exp();
 const cors = require('cors');
 app.use(cors({
-  origin :'https://deployment-test-r6uu.vercel.app',
+  origin :'https://code-note-frontend.vercel.app/',
   credentials:true
 }))
 app.use((req, res, next) => {
